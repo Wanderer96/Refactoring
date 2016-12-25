@@ -1,19 +1,27 @@
 //Замена условного оператора полиморфизмом
-public class Bird 
+public abstract class Bird 
 {
-  public double GetSpeed() 
+  public abstract double GetSpeed();
+}
+class European: Bird 
+{
+  public override double GetSpeed() 
   {
-    switch (type) 
-    {
-      case EUROPEAN:
-        return GetBaseSpeed();
-      case AFRICAN:
-        return GetBaseSpeed() - GetLoadFactor() * numberOfCoconuts;
-      case NORWEGIAN_BLUE:
-        return isNailed ? 0 : GetBaseSpeed(voltage);
-      default:
-        throw new Exception("Should be unreachable");
-    }
+    return GetBaseSpeed();
   }
 }
-
+class African: Bird 
+{
+  public override double GetSpeed() 
+  {
+    return GetBaseSpeed() - GetLoadFactor() * numberOfCoconuts;
+  }
+}
+class NorwegianBlue: Bird
+{
+  public override double GetSpeed() 
+  {
+    return isNailed ? 0 : GetBaseSpeed(voltage);
+  }
+}
+speed = bird.GetSpeed();

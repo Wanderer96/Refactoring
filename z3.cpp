@@ -1,37 +1,35 @@
 ///подьём поля и метода
 class A
 {
-public:	........
+public:	
+	void shuffle();
+	int x;
 };
 
 class B :
 	public A
 {
-public:
-	void shuffle();
-	int x;
+public:......
 };
 class C :
 	public A
 {
-public:
-	void shuffle();
-	int x;
+public:......
 };
 /// спуск поля и метода
 class A
 {
-public:
-	void shuffle();
-	int x;
+public:......
 };
 class B :
 	public A
 {
 public:
+	void shuffle();
 };
 class C :
 	public A
 {
 public:
+	int x;
 };

@@ -1,23 +1,18 @@
-//временная переменная
+//замена временной переменноя
 double HasDiscount(Order order) 
 {
-  double basePrice = order.BasePrice();
-  return (basePrice > 1000);
+  return (order.BasePrice() > 1000);
 }
-//Встраивание метода
-class PizzaDelivery 
+//Встраивание метода....Замените вызовы метода его содержимым и удалите сам метод.
+class PizzaDelivery
 {
   int getRating()
   {
-    return moreThanFiveLateDeliveries() ? 2 : 1;
-  }
-  boolean moreThanFiveLateDeliveries()
-  {
-    return numberOfLateDeliveries > 5;
+    return numberOfLateDeliveries > 5 ? 2 : 1;
   }
 }
 //параметр метода
-void sum(double x,double p)
+void sum()
 {
 	...........
 }
